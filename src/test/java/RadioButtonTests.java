@@ -17,7 +17,6 @@ public class RadioButtonTests extends ConfigTests {
 
     @Test(priority = 2, groups = {"FrontEnd"})
     public void testCheckboxYes() {
-        System.out.println();
         open("https://demoqa.com/radio-button");
 
         SelenideElement yesRadio = $("label[for='yesRadio']");
