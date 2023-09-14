@@ -14,19 +14,25 @@ public class CheckboxTests extends ConfigTests {
     @BeforeMethod
     public void CheckboxTests() {
         reportsFolder = "src/main/resources/CheckboxFailedTests";
-        baseUrl= "http://the-internet.herokuapp.com";
     }
 
 
-    @Test
-    public void testCheckboxOperations() {
-        Selenide.open("/checkboxes");
-
+    @Test(groups = {"FrontEnd"})
+    public void testCheckboxUncheck() {
+        open("http://the-internet.herokuapp.com/checkboxes");
 
         ElementsCollection checkboxCollection = $("#checkboxes").$$(by("type", "checkbox"));
 
         // Create a method to uncheck a checked checkbox and invoke a failed TestNG soft assertion
         uncheckCheckbox(checkboxCollection);
+
+        softAssert.assertAll();
+    }
+    @Test(groups = {"BackEnd"})
+    public void testCheckboxCheck() {
+        open("http://the-internet.herokuapp.com/checkboxes");
+
+        ElementsCollection checkboxCollection = $("#checkboxes").$$(by("type", "checkbox"));
 
         // Create a method to check an unchecked checkbox and invoke a failed TestNG soft assertion
         checkCheckbox(checkboxCollection);
