@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="MyTestSuite" parallel="classes">
+    <test name="BackAndFrontEndTests">
+        <groups>
+            <define name="All_End">
+                <include name=".*End"/>
+            </define>
+            <run>
+                <include name="All_End"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="CheckboxTests"/>
+            <class name="RadioButtonTests"/>
+        </classes>
+    </test>
+</suite>
