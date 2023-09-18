@@ -1,0 +1,30 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="AutomationPracticeFormSuite">
+    <test name="FormTest">
+        <parameter name="firstName" value="Giorgi" />
+        <parameter name="lastName" value="Zandarashvili" />
+        <parameter name="gender" value="male" />
+        <parameter name="mobileNumber" value="5518252221" />
+        <classes>
+            <class name="Parameterization" />
+        </classes>
+    </test>
+    <test name="FormTest2">
+        <parameter name="firstName" value="mari" />
+        <parameter name="lastName" value="maridze" />
+        <parameter name="gender" value="female" />
+        <parameter name="mobileNumber" value="5554443332" />
+        <classes>
+            <class name="Parameterization" />
+        </classes>
+    </test>
+    <test name="FormTest3">
+        <parameter name="firstName" value="turtle" />
+        <parameter name="lastName" value="ku" />
+        <parameter name="gender" value="female" />
+        <parameter name="mobileNumber" value="0123456789" />
+        <classes>
+            <class name="Parameterization" />
+        </classes>
+    </test>
+</suite>
